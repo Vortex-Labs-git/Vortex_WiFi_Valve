@@ -19,6 +19,7 @@
 #include "lwip/sys.h"
 
 #include "websocket_server.h"
+#include "mqtt_client_fn.h"
 
 
 /* STA Configuration */
@@ -81,6 +82,8 @@ static void wifi_event_handler(void* arg, esp_event_base_t event_base, int32_t e
         // Router found. Turn OFF the AP.
         ESP_LOGI(TAG_STA, "Router connected. Switching to STA Mode (Turning AP OFF)...");
         esp_wifi_set_mode(WIFI_MODE_STA);
+
+        start_mqtt_client();
     }
 
     // -----------------------------------------------------------

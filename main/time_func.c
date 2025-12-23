@@ -5,20 +5,20 @@
 #include "time_func.h"
 
 
-static void obtain_time(void)
-{
-    sntp_setoperatingmode(SNTP_OPMODE_POLL);
-    sntp_setservername(0, "pool.ntp.org");
-    sntp_init();
+// static void obtain_time(void)
+// {
+//     sntp_setoperatingmode(SNTP_OPMODE_POLL);
+//     sntp_setservername(0, "pool.ntp.org");
+//     sntp_init();
 
-    time_t now = 0;
-    struct tm timeinfo = { 0 };
-    while (timeinfo.tm_year < (2020 - 1900)) {
-        vTaskDelay(pdMS_TO_TICKS(2000));
-        time(&now);
-        localtime_r(&now, &timeinfo);
-    }
-}
+//     time_t now = 0;
+//     struct tm timeinfo = { 0 };
+//     while (timeinfo.tm_year < (2020 - 1900)) {
+//         vTaskDelay(pdMS_TO_TICKS(2000));
+//         time(&now);
+//         localtime_r(&now, &timeinfo);
+//     }
+// }
 
 // Function to get the current timestamp in ISO format
 void get_current_timestamp(char *timestamp, size_t timestamp_size) {
