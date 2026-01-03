@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "WiFi_valve",
-    "project_version":    "97ae934-dirty",
+    "project_version":    "8f27d1b-dirty",
     "project_path":       "/home/hp/Documents/vortex/WiFi_valve",
     "idf_path":           "/home/hp/esp/v5.4.2/esp-idf",
     "build_dir":          "/home/hp/Documents/vortex/WiFi_valve/build",
@@ -1190,12 +1190,12 @@
             "dir": "/home/hp/Documents/vortex/WiFi_valve/main",
             "type": "LIBRARY",
             "lib": "__idf_main",
-            "reqs": [ "esp_wifi", "mqtt", "nvs_flash", "json", "esp_http_server", "esp_event" ],
+            "reqs": [ "esp_wifi", "mqtt", "nvs_flash", "json", "esp_http_server", "esp_event", "driver" ],
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "/home/hp/Documents/vortex/WiFi_valve/build/esp-idf/main/libmain.a",
-            "sources": [ "/home/hp/Documents/vortex/WiFi_valve/main/softap_sta.c", "/home/hp/Documents/vortex/WiFi_valve/main/websocket_server.c", "/home/hp/Documents/vortex/WiFi_valve/main/state_offline.c", "/home/hp/Documents/vortex/WiFi_valve/main/time_func.c", "/home/hp/Documents/vortex/WiFi_valve/main/mqtt_client_fn.c" ],
+            "sources": [ "/home/hp/Documents/vortex/WiFi_valve/main/softap_sta.c", "/home/hp/Documents/vortex/WiFi_valve/main/global_var.c", "/home/hp/Documents/vortex/WiFi_valve/main/websocket_fn/websocket_server_fn.c", "/home/hp/Documents/vortex/WiFi_valve/main/websocket_fn/websocket_state_fn.c", "/home/hp/Documents/vortex/WiFi_valve/main/time_func.c", "/home/hp/Documents/vortex/WiFi_valve/main/mqtt_fn/mqtt_client_fn.c", "/home/hp/Documents/vortex/WiFi_valve/main/mqtt_fn/mqtt_state_fn.c", "/home/hp/Documents/vortex/WiFi_valve/main/valve_fn/led_indicators.c", "/home/hp/Documents/vortex/WiFi_valve/main/valve_fn/valve_motor.c", "/home/hp/Documents/vortex/WiFi_valve/main/valve_fn/limit_switch.c", "/home/hp/Documents/vortex/WiFi_valve/main/valve_fn/valve_process.c" ],
             "include_dirs": [ "." ]
         },
         "mbedtls": {
@@ -2841,7 +2841,7 @@
             "prefix": "idf",
             "dir": "/home/hp/Documents/vortex/WiFi_valve/main",
             "lib": "__idf_main",
-            "reqs": [ "esp_wifi", "mqtt", "nvs_flash", "json", "esp_http_server", "esp_event" ],
+            "reqs": [ "esp_wifi", "mqtt", "nvs_flash", "json", "esp_http_server", "esp_event", "driver" ],
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],

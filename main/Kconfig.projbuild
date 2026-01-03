@@ -53,3 +53,101 @@ menu "WiFi Mode Configuration"
 
     endmenu
 endmenu
+
+menu "Device Configuration"
+    menu "Device Data Configuration"
+        comment "Device Data Configuration"
+
+        config WIFI_VALVE_ID
+            string "WiFi Valve ID"
+            default "VA202601001"
+            help
+                Wifi valve device Id.
+
+    endmenu
+
+    menu "Motor Driver Configuration"
+        comment "Motor Driver Configuration"
+
+        config MOTOR_EN_PIN
+            int "MOTOR EN PIN"
+            default 25
+            help
+                Motor Driver PWM pin number.
+
+        config MOTOR_IN1_PIN
+            int "MOTOR IN1 PIN"
+            default 33
+            help
+                Motor Driver IN1 pin number.
+
+        config MOTOR_IN2_PIN
+            int "MOTOR IN2 PIN"
+            default 32
+            help
+                Motor Driver IN2 pin number.
+
+    endmenu
+
+    menu "Limit Switches Configuration"
+        comment "Limit Switches Configuration"
+
+        config CLOSE_LIMIT_PIN_A
+            int "CLOSE LIMIT PIN A"
+            default 21
+            help
+                Close Limit Switch pin A number.
+
+        config CLOSE_LIMIT_PIN_B
+            int "CLOSE LIMIT PIN B"
+            default 19
+            help
+                Close Limit Switch pin B number.
+
+        config OPEN_LIMIT_PIN_A
+            int "OPEN LIMIT PIN A"
+            default 18
+            help
+                Open Limit Switch pin A number.
+
+        config OPEN_LIMIT_PIN_B
+            int "OPEN LIMIT PIN B"
+            default 5
+            help
+                Open Limit Switch pin B number.
+    endmenu
+
+    menu "LED Indicators Configuration"
+        comment "LED Indicators Configuration"
+
+        config RED_LED_PIN
+            int "RED LED PIN"
+            default 17
+            help
+                Red LED pin number.
+
+        config GREEN_LED_PIN
+            int "GREEN LED PIN"
+            default 16
+            help
+                Green LED pin number.
+    endmenu
+
+    menu "MQTT client Configuration"
+        comment "MQTT client Configuration"
+
+        config MQTT_BROKER_URI
+            string "MQTT BROKER URI"
+            default "mqtt://10.217.90.172"
+            help
+                MQTT broker URI for the device to connect to.
+
+        config MQTT_BASE_TOPIC
+            string "MQTT BASE TOPIC"
+            default "vortex_device/wifi_valve/"
+            help
+                MQTT base topic for the device communication.
+
+    endmenu
+    
+endmenu

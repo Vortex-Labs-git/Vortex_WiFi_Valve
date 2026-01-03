@@ -1,8 +1,8 @@
 #include "esp_log.h"
 #include "cJSON.h"
 
-#include "websocket_server.h"
-#include "state_offline.h"
+#include "websocket_server_fn.h"
+#include "websocket_state_fn.h"
 
 #define EXAMPLE_MAX_STA_CONN 5
 #define MAX_CLIENTS 10

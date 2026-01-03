@@ -1,8 +1,23 @@
 idf_component_register(SRCS 
                             "softap_sta.c"
-                            "websocket_server.c"
-                            "state_offline.c"
+                            "global_var.c"
+                            "websocket_fn/websocket_server_fn.c"
+                            "websocket_fn/websocket_state_fn.c"
                             "time_func.c"
-                            "mqtt_client_fn.c"
-                    INCLUDE_DIRS "."
-                    REQUIRES esp_wifi mqtt nvs_flash json esp_http_server esp_event)
+                            "mqtt_fn/mqtt_client_fn.c"
+                            "mqtt_fn/mqtt_state_fn.c"
+                            "valve_fn/led_indicators.c"
+                            "valve_fn/valve_motor.c"
+                            "valve_fn/limit_switch.c"
+                            "valve_fn/valve_process.c"
+                    INCLUDE_DIRS 
+                        "."
+                    REQUIRES 
+                        esp_wifi 
+                        mqtt 
+                        nvs_flash 
+                        json 
+                        esp_http_server 
+                        esp_event
+                        driver
+                        )

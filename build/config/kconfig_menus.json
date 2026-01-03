@@ -5088,6 +5088,174 @@
                 "children": [
                     {
                         "children": [],
+                        "depends_on": null,
+                        "help": "Wifi valve device Id.",
+                        "id": "WIFI_VALVE_ID",
+                        "name": "WIFI_VALVE_ID",
+                        "range": null,
+                        "title": "WiFi Valve ID",
+                        "type": "string"
+                    }
+                ],
+                "depends_on": null,
+                "id": "device-configuration-device-data-configuration",
+                "title": "Device Data Configuration",
+                "type": "menu"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Motor Driver PWM pin number.",
+                        "id": "MOTOR_EN_PIN",
+                        "name": "MOTOR_EN_PIN",
+                        "range": null,
+                        "title": "MOTOR EN PIN",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Motor Driver IN1 pin number.",
+                        "id": "MOTOR_IN1_PIN",
+                        "name": "MOTOR_IN1_PIN",
+                        "range": null,
+                        "title": "MOTOR IN1 PIN",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Motor Driver IN2 pin number.",
+                        "id": "MOTOR_IN2_PIN",
+                        "name": "MOTOR_IN2_PIN",
+                        "range": null,
+                        "title": "MOTOR IN2 PIN",
+                        "type": "int"
+                    }
+                ],
+                "depends_on": null,
+                "id": "device-configuration-motor-driver-configuration",
+                "title": "Motor Driver Configuration",
+                "type": "menu"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Close Limit Switch pin A number.",
+                        "id": "CLOSE_LIMIT_PIN_A",
+                        "name": "CLOSE_LIMIT_PIN_A",
+                        "range": null,
+                        "title": "CLOSE LIMIT PIN A",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Close Limit Switch pin B number.",
+                        "id": "CLOSE_LIMIT_PIN_B",
+                        "name": "CLOSE_LIMIT_PIN_B",
+                        "range": null,
+                        "title": "CLOSE LIMIT PIN B",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Open Limit Switch pin A number.",
+                        "id": "OPEN_LIMIT_PIN_A",
+                        "name": "OPEN_LIMIT_PIN_A",
+                        "range": null,
+                        "title": "OPEN LIMIT PIN A",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Open Limit Switch pin B number.",
+                        "id": "OPEN_LIMIT_PIN_B",
+                        "name": "OPEN_LIMIT_PIN_B",
+                        "range": null,
+                        "title": "OPEN LIMIT PIN B",
+                        "type": "int"
+                    }
+                ],
+                "depends_on": null,
+                "id": "device-configuration-limit-switches-configuration",
+                "title": "Limit Switches Configuration",
+                "type": "menu"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Red LED pin number.",
+                        "id": "RED_LED_PIN",
+                        "name": "RED_LED_PIN",
+                        "range": null,
+                        "title": "RED LED PIN",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Green LED pin number.",
+                        "id": "GREEN_LED_PIN",
+                        "name": "GREEN_LED_PIN",
+                        "range": null,
+                        "title": "GREEN LED PIN",
+                        "type": "int"
+                    }
+                ],
+                "depends_on": null,
+                "id": "device-configuration-led-indicators-configuration",
+                "title": "LED Indicators Configuration",
+                "type": "menu"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "MQTT broker URI for the device to connect to.",
+                        "id": "MQTT_BROKER_URI",
+                        "name": "MQTT_BROKER_URI",
+                        "range": null,
+                        "title": "MQTT BROKER URI",
+                        "type": "string"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "MQTT base topic for the device communication.",
+                        "id": "MQTT_BASE_TOPIC",
+                        "name": "MQTT_BASE_TOPIC",
+                        "range": null,
+                        "title": "MQTT BASE TOPIC",
+                        "type": "string"
+                    }
+                ],
+                "depends_on": null,
+                "id": "device-configuration-mqtt-client-configuration",
+                "title": "MQTT client Configuration",
+                "type": "menu"
+            }
+        ],
+        "depends_on": null,
+        "id": "device-configuration",
+        "title": "Device Configuration",
+        "type": "menu"
+    },
+    {
+        "children": [
+            {
+                "children": [
+                    {
+                        "children": [],
                         "depends_on": "<choice COMPILER_OPTIMIZATION>",
                         "help": null,
                         "id": "COMPILER_OPTIMIZATION_DEBUG",

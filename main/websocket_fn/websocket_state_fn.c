@@ -2,16 +2,24 @@
 #include <stdbool.h>
 #include "esp_log.h"
 #include "cJSON.h"
+#include "sdkconfig.h" 
 
-#include "state_offline.h"
+#include "websocket_state_fn.h"
 #include "time_func.h"
+
+#define DEVICE_ID CONFIG_WIFI_VALVE_ID
 
 static const char *TAG = "STATE UPDATE OFFLINE";
 
 
+
+
+
+
+static const char *valve_id  = DEVICE_ID;
 /* Example runtime variables */
 static const char *user_id    = "useer001";
-static const char *valve_id  = "dev0016";
+
 static const char *device_name = "home valve";
 /* Controller data */
 bool schedule_enabled = true;
@@ -219,5 +227,3 @@ void process_message(const char *payload, bool *connection_authorized) {
     cJSON_Delete(root);
 }
 
-
-// void websocket_publish_

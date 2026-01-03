@@ -18,9 +18,10 @@
 #include "lwip/err.h"
 #include "lwip/sys.h"
 
-#include "websocket_server.h"
-#include "mqtt_client_fn.h"
-
+#include "time_func.h"
+#include "websocket_fn/websocket_server_fn.h"
+#include "mqtt_fn/mqtt_client_fn.h"
+#include "valve_fn/valve_process.h"
 
 /* STA Configuration */
 #define ESP_WIFI_STA_SSID                   CONFIG_ESP_WIFI_STA_SSID 
@@ -55,6 +56,8 @@ static void wifi_event_handler(void* arg, esp_event_base_t event_base, int32_t e
     
     else if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_DISCONNECTED) {
         ESP_LOGI(TAG_STA, "Router Disconnected/Not Found.");
+
+        stop_mqtt_client();
 
         // If Router is lost, ensure AP is ON
         wifi_mode_t current_mode;
@@ -221,4 +224,6 @@ void app_main(void)
     ESP_ERROR_CHECK(ret);
 
     wifi_init_smart_mode();
+
+    obtain_time();
 }

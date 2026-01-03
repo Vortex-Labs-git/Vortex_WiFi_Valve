@@ -1,5 +1,5 @@
-#ifndef WEBSOCKET_SERVER_H
-#define WEBSOCKET_SERVER_H
+#ifndef WEBSOCKET_SERVER_FN_H
+#define WEBSOCKET_SERVER_FN_H
 
 #include "esp_http_server.h"
 

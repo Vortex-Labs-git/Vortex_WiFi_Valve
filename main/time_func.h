@@ -3,6 +3,7 @@
 
 #include <stddef.h>
 
-void get_current_timestamp(char *timestamp, size_t timestamp_size) ;
+void obtain_time(void);
+void get_current_timestamp(char *timestamp, size_t timestamp_size);
 
 #endif // TIME_FUNC_H
